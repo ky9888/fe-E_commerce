@@ -2,7 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* styles/global.css */
+
+/* Ghi đè các quy tắc autofill của trình duyệt */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    appearance: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    -webkit-text-fill-color: initial !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Firefox */
+
+
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +49,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */

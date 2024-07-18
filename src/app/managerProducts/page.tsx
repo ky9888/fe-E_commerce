@@ -1,5 +1,5 @@
- import HederMain from "@/components/herderMain/HerderMain";
-import HomePage from "@/components/home/Home";
+import ManagerProducts from "./ManagerProducts";
+
 
 export default async function home() {
   const res =await fetch ("http://localhost:5000/api/products/getAllProducts",{cache: "no-store"})
@@ -8,9 +8,8 @@ export default async function home() {
   console.log("check data",data);
   
   return (
-    <div className="bg-slate-200">
-      <div><HederMain/></div>
-      <div><HomePage data={data ? data :[]}/></div>
+    <div className="">
+      <ManagerProducts data={data ? data :[]}/>
       
     </div>
   );

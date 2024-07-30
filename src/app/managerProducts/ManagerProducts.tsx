@@ -38,14 +38,14 @@ const ManagerProducts: React.FC<HomePageProps> = ({ data }) => {
   };
 
   return (
-    <div className="mt-10">
-      <div className="flex justify-between px-[30%] mb-2 text-[20px] font-bold">
+    <div className="w ">
+      <div className="flex justify-between space-x-10 pr-[38%] pl-[22%] mb-2 text-[20px] font-bold">
         <p>Thông tin sản phẩm</p>
         <p>Giá</p>
       </div>
       {products.map((item) => (
-        <div key={item._id} className="flex py-1 justify-between px-[20%] items-center mb-1">
-          <div className="flex space-x-1">
+        <div key={item._id} className="flex py-1 space-x-10 justify-between px-[20%] items-center mb-1">
+          <div className="flex space-x-2 items-center">
             <div>
               <Image
                 src={item.images[0]?.image}

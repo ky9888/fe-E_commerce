@@ -13,7 +13,6 @@ export type seletImgtype={
 
 }
 
-
 export default async  function home({
     params:{id}
 }:{
@@ -24,9 +23,9 @@ export default async  function home({
     const data=ress.data
     console.log("check data",data);
   return (
-    <div>
+    <>
      <UpdateProduct data={data}/>
       
-    </div>
+    </>
   );
 }

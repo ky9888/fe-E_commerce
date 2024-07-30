@@ -26,9 +26,11 @@ export default function RootLayout({
           color:"#fff"
         }}}/>
         <CartProvider>
-        <NavBar/>
-        <main> {children}</main>
-        <Footer/>
+       <div className="flex flex-col h-screen  ">
+          <NavBar/>
+          <main className="flex grow "> {children}</main>
+          <Footer/>
+       </div>
         </CartProvider>
         
         </body>

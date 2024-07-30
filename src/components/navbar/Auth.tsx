@@ -13,7 +13,7 @@ const Auth: React.FC = () => {
   const blackUseRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const { getUserId,setGetUserId } = useCart();
-  console.log("aloooooooo", getUserId);
+  // console.log("aloooooooo", getUserGG);
   
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -64,7 +64,7 @@ const Auth: React.FC = () => {
       resetBlackOverlay();
     }
   };
-  const handleNavigation = (path: string) => {
+  const handleNavigation = (path: string):void => {
     resetBlackOverlay();
     router.push(path);
   };
@@ -73,7 +73,8 @@ const Auth: React.FC = () => {
     setGetUserId(null)
     router.push("/")
   };
-
+  
+  
   return (
     <div className="cursor-pointer">
       <div ref={blackUseRef}></div>

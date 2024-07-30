@@ -8,7 +8,7 @@ export default async function home() {
   console.log("check data",data);
   
   return (
-    <div className="bg-slate-200">
+    <div className="bg-slate-200 overflow-x-auto ">
       <div><HederMain/></div>
       <div><HomePage data={data ? data :[]}/></div>
     </div>

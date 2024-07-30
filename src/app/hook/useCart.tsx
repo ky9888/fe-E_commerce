@@ -10,14 +10,38 @@ import {
 } from "react";
 import { toast } from "react-hot-toast";
 type User = {
-  id:string
-  userName:string
-}
+  id: string;
+  userName: string;
+  displayName: string;
+  
+};
+type Product = {
+  _id: string;
+  name: string;
+  images: [
+    {image: string;},
+    {image: string;},
+    {image: string;},
+    {image: string;},
+    {image: string;}
+  ]
+   
+  note: string;
+  price: string;
+  giam: string;
+  priceG: string;
+  title: string;
+  describe: string;
+};
 type cartContextType = {
   cartTotalQty: number;
   cartTotalAmout: number;
   getUserId: User | null;
+  dataSearch:Product[] | null;
   setGetUserId: React.Dispatch<React.SetStateAction<User | null>>;
+  setDataSearch: React.Dispatch<React.SetStateAction<Product[] | null>>;
+  getSearch: string | null; // Allow `string` or `null`
+  setGetSearch: React.Dispatch<React.SetStateAction<string | null>>;
   cartProducts: productType[] | null;
   handleAddProducTocart: (product: productType) => void;
   handleRemoveProducts: (product: productType) => void;
@@ -34,6 +58,9 @@ export const CartContextProvider = (props: props) => {
   const [cartTotalAmout, setCartTotalAmout] = useState(0);
   const [cartProducts, setCartProducts] = useState<productType[] | null>(null);
   const [getUserId, setGetUserId] = useState<User | null>(null);
+  const [dataSearch, setDataSearch] = useState<Product[] | null>(null);
+  const [getSearch, setGetSearch] = useState<string | null>(null);
+  
   useEffect(() => {
     const getTotal = () => {
       if (cartProducts) {
@@ -134,6 +161,10 @@ export const CartContextProvider = (props: props) => {
     cartTotalAmout,
     getUserId,
     setGetUserId,
+    dataSearch,
+    setDataSearch,
+    getSearch,
+    setGetSearch,
     handleAddProducTocart,
     handleRemoveProducts,
     handleCardQtyIncrease,

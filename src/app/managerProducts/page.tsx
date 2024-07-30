@@ -8,7 +8,7 @@ export default async function home() {
   console.log("check data",data);
   
   return (
-    <div className="">
+    <div className=" mx-auto py-10 w-full">
       <ManagerProducts data={data ? data :[]}/>
       
     </div>

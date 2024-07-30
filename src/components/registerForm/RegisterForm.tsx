@@ -66,7 +66,7 @@ const RegisterForm: React.FC = () => {
   });
 
   return (
-    <div className="  flex justify-center mt-[13%] px-[30%] max-lg:px-[7%] ">
+    <div className=" w-screen flex justify-center mt-[10%] px-[30%] max-lg:px-[7%] ">
       <form
         className="rounded-lg space-y-2 w-full h-full shadow-[0_0px_70px_-5px_rgba(0,0,0,0.1)] p-5"
         onSubmit={formik.handleSubmit}

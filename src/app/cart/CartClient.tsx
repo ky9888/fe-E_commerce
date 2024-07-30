@@ -11,8 +11,8 @@ const CartClient = () => {
 
   if (!cartProducts || cartProducts.length === 0) {
     return (
-      <div className="flex justify-center mt-5 ">
-        <div className="space-y-3">
+      <div className="flex justify-center  w-full py-5">
+        <div className="space-y-3 ">
           <p className="text-[20px] font-bold ">Giỏ hàng trống</p>
           <div className="flex items-center space-x-1">
             <p><GoArrowLeft /></p>
@@ -28,7 +28,7 @@ const CartClient = () => {
   }
 
   return (
-    <div className="px-[15%]">
+    <div className="px-[15%] py-10 overflow-auto w-full">
       <h1 className="text-center text-[20px] font-bold mt-6">
         Giỏ hàng của bạn
       </h1>
@@ -52,17 +52,15 @@ const CartClient = () => {
             );
           })}
       </div>
-      <div className="flex items-center  justify-between mt-4">
-        <button className="py-1 px-3 border border-black rounded-lg text-[12px] font-medium mb-6 bg-slate-800 text-white">
-          Xóa sản phẩm
-        </button>
+      <div className="flex justify-end mt-4 pr-2">
+       
         <div className=" w-[275px] space-y-1  ">
           <div
             className="flex space-x-10  text-[15px] font-bold
             "
           >
             <p>Tổng tiền:</p>
-            <p>{cartTotalAmout.toLocaleString('vi-VN')}đ</p>
+            <p >{cartTotalAmout.toLocaleString('vi-VN')}đ</p>
           </div>
           <div className="flex justify-center bg-slate-800 rounded-md text-white">
             <button className="py-2  ">Thanh Toán</button>

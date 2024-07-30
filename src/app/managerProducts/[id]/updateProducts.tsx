@@ -67,11 +67,11 @@ const UpdateProduct: React.FC<HomePageProps> = ({ data },) => {
   });
 
   return (
-    <div className="px-[20%] mt-5">
+    <div className="px-[30%] mt-5 mx-auto w-full">
       <h1 className="text-center text-[20px] font-bold mb-5">Sửa sản phẩm</h1>
       <FormikProvider value={formik}>
         <form
-          className="rounded-lg font-medium space-y-2 w-full h-full shadow-[0_0px_70px_-5px_rgba(0,0,0,0.1)] py-5 px-10"
+          className="rounded-lg font-medium space-y-2 shadow-[0_0px_70px_-5px_rgba(0,0,0,0.1)] py-5 px-10"
           onSubmit={formik.handleSubmit}
         >
           <div >

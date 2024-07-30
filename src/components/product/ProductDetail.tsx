@@ -83,13 +83,13 @@ const ProductDetail: React.FC<HomePageProps> = ({ data }) => {
   }, [cartProduct.quantity]);
 
   return (
-    <div className=" mt-5  px-[12%]">
+    <div className=" my-10  px-[12%] overflow-auto py-10">
       <p className="mb-10 text-[15px] font-medium">
         <span className="text-blue-600">Trang chủ</span> /{" "}
         <span className="text-blue-600">{data.nameTitle} </span>/ {data.title}
       </p>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between max-lg:block">
         <div className="px-[10%]">
           <ProductImg
             cartProduct={cartProduct}
@@ -131,17 +131,17 @@ const ProductDetail: React.FC<HomePageProps> = ({ data }) => {
             </>
           ) : (
             <>
-              <div className="flex items-center space-x-5 mt-10">
-                <div className=" border border-yellow-500 flex justify-center w-[250px] py-4 rounded-xl bg-gradient-to-b from-yellow-100 to-white">
+              <div className="flex items-center space-x-5 mt-10 ">
+                <div className=" border max-sm:px-2 border-yellow-500 flex justify-center w-[250px] py-4 rounded-xl bg-gradient-to-b from-yellow-100 to-white">
                   <div className="">
                     <p className="font-medium">Mua ngay với giá</p>
-                    <p className="text-[28px] font-bold">{data.priceG}đ</p>
-                    <p className="line-through">{data.price}đ</p>
+                    <p className="text-[28px] font-bold max-sm:text-[15px]  ">{data.priceG}đ</p>
+                    <p className="line-through max-sm:text-[12px]">{data.price}đ</p>
                   </div>
                 </div>
-                <div className="border border-slate-500 py-2 px-6  rounded-md flex space-x-3">
+                <div className="border max-sm:pr-3 max-sm:items-center border-slate-500 py-2 px-6  rounded-md flex space-x-3">
                   <p>Số lượng:</p>
-                 <div className="">
+                 <div >
                     <SetQuantity
                       cartProduct={cartProduct}
                       handleQtyIncrease={handleQtyIncrease}

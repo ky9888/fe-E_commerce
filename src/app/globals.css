@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.fixed-size-li {
+  flex: 0 0 auto; /* Ngăn các mục li thay đổi kích thước */
+    /* Thiết lập kích thước cố định cho các mục li */
+}
 
 /* styles/global.css */
 

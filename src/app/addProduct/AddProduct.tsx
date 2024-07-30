@@ -1,12 +1,11 @@
 "use client";
-import {  useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useFormik, Field, FieldArray, FormikProvider } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 
 type Product = {
   name: string;
-  note: string;
   priceG: string;
   price: string;
   title: string;
@@ -25,7 +24,6 @@ const AddProducts: React.FC = () => {
   const formik = useFormik<Product>({
     initialValues: {
       name: "",
-      note: "",
       priceG: "",
       price: "",
       title: "",
@@ -34,7 +32,6 @@ const AddProducts: React.FC = () => {
     },
     validationSchema: Yup.object({
       name: Yup.string().required("Không được để trống"),
-      note: Yup.string().required("Không được để trống"),
       priceG: Yup.string().required("Không được để trống"),
       price: Yup.string().required("Không được để trống"),
       title: Yup.string().required("Không được để trống"),
@@ -47,7 +44,7 @@ const AddProducts: React.FC = () => {
       ),
     }),
     onSubmit: (values) => {
-      alert("allo");
+    
       console.log(values);
       axios({
         method: "POST",
@@ -66,8 +63,8 @@ const AddProducts: React.FC = () => {
   });
 
   return (
-    <div className=" justify-center px-[25%] max-lg:px-[7%] rounded-md mt-5">
-       <h1 className="text-center text-[20px] font-bold mb-5">Thêm sản phẩm</h1>
+    <div className="px-[25%]  max-lg:px-[7%] rounded-md mt-5">
+      <h1 className="text-center text-[20px] font-bold mb-5">Thêm sản phẩm</h1>
       <FormikProvider value={formik}>
         <form
           className="rounded-lg font-medium space-y-2 w-full h-full shadow-[0_0px_70px_-5px_rgba(0,0,0,0.1)] py-5 px-10"
@@ -138,7 +135,7 @@ const AddProducts: React.FC = () => {
             )}
             <br />
           </div>
-         
+
           <div>
             <label htmlFor="priceG">Giá Giảm: </label>
             <br />

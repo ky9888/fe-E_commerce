@@ -4,7 +4,7 @@ const AddProductPage = () => {
   
 
   return (
-    <div>
+    <div className='mx-auto w-full'>
       <Addproducts/>
     </div>
   );

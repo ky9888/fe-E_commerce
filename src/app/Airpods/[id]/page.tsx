@@ -24,9 +24,9 @@ export default async  function home({
     const data=ress.data
     console.log("check data",data);
   return (
-    <div>
+    <>
      <ProductDetail data={data} />
       
-    </div>
+    </>
   );
 }

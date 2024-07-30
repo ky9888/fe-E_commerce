@@ -12,7 +12,7 @@ const SetQuantity:React.FC<SetQuantity> = ({cartProduct,handleQtyIncrease,handle
 }
     return ( 
         <div className="flex justify-center space-x-4  " >
-           <div className="flex space-x-4">
+           <div className="flex  space-x-4 max-sm:space-x-1">
               
                 <button className="bg-slate-200 px-2 rounded-md" onClick={handleQtyDecrease}>-</button>
                 <p>{cartProduct.quantity}</p>

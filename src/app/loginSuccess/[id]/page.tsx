@@ -3,7 +3,8 @@ import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import { useCart } from "@/app/hook/useCart";
 import { useEffect } from "react";
-
+import dotenv from "dotenv";
+dotenv.config();
 
 
 export default function Home({

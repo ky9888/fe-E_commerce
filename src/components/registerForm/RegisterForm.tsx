@@ -8,6 +8,8 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { GrGoogle } from "react-icons/gr";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import dotenv from "dotenv";
+dotenv.config();
 
 type register = {
   userName: string;
@@ -49,7 +51,7 @@ const RegisterForm: React.FC = () => {
        console.log(values);
          axios({
            method: 'POST',
-           url: 'http://localhost:5000/api/auth/singUp',
+           url: `${process.env.URL}/auth/singUp`,
            data: values
          })
            .then(function (res) {

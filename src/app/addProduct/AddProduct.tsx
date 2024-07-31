@@ -4,6 +4,7 @@ import { useFormik, Field, FieldArray, FormikProvider } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 
+
 type Product = {
   name: string;
   priceG: string;
@@ -48,7 +49,7 @@ const AddProducts: React.FC = () => {
       console.log(values);
       axios({
         method: "POST",
-        url: "http://localhost:5000/api/products/createProduct",
+        url: `${process.env.URL}/products/createProduct`,
         data: values,
       })
         .then((res) => {

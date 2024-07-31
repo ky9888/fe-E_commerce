@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { jwtDecode } from "jwt-decode";
 import { useCart } from "@/app/hook/useCart";
 import { getApiUser } from "./GetUserApi";
+
 type register = {
   email: string;
   password: string;
@@ -50,7 +51,7 @@ const LoginForm: React.FC = () => {
       console.log(values);
       axios({
         method: "POST",
-        url: "http://localhost:5000/api/auth/singin",
+        url: `${process.env.URL}/auth/singin`,
         data: values,
       })
         .then(function (res) {

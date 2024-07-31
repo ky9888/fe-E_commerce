@@ -8,6 +8,7 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { useRouter } from 'next/navigation';
 
+
 const redressed = Redressed({ subsets: ["latin"], weight: ["400"] });
 
 const NavBar = () => {

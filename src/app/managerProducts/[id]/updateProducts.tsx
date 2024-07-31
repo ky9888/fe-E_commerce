@@ -52,7 +52,7 @@ const UpdateProduct: React.FC<HomePageProps> = ({ data },) => {
       console.log(values);
       axios({
         method: "PUT",
-        url: `http://localhost:5000/api/products/updateProducts/${formik.values._id}`,
+        url: `${process.env.URL}/products/updateProducts/${formik.values._id}`,
         data: values,
       })
         .then((res) => {

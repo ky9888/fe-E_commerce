@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+
 type Product = {
   _id: string;
   name: string;
@@ -25,7 +26,7 @@ const ManagerProducts: React.FC<HomePageProps> = ({ data }) => {
 
   const handleDelete = async (id: string) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/products/deleteProducts/${id}`, { method: "DELETE" });
+      const res = await fetch(`${process.env.URL}/products/deleteProducts/${id}`, { method: "DELETE" });
       if (!res.ok) {
         throw new Error("Failed to delete product");
       }

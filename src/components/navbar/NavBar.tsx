@@ -9,12 +9,16 @@ import axios from "axios";
 import { useRouter } from 'next/navigation';
 
 
+
 const redressed = Redressed({ subsets: ["latin"], weight: ["400"] });
 
 const NavBar = () => {
   const { getSearch, setGetSearch } = useCart();
 const {dataSearch,setDataSearch} =useCart()
 const router = useRouter();
+
+
+
 
   console.log('Data Search:', dataSearch);
   

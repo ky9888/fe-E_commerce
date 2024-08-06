@@ -19,7 +19,7 @@ export default async  function home({
 }:{
     params:{id:string}
 }) {
-    const res =await fetch (`http://localhost:5000/api/products/getDetailProducts/${id}`,{cache: "no-store"})
+    const res =await fetch (`https://be-e-commerce-3ayq.onrender.com/api/products/getDetailProducts/${id}`,{cache: "no-store"})
     const ress=await res.json();
     const data=ress.data
     console.log("check data",data);

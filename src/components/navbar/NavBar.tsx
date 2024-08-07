@@ -22,7 +22,7 @@ const router = useRouter();
   
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`https://be-e-commerce-53v7.onrender.com/api/products/getAllProducts/?nameTitle=${getSearch}`);
+      const response = await axios.get(`https://be-e-commerce-s8f7.onrender.com/api/products/getAllProducts/?nameTitle=${getSearch}`);
       setDataSearch(response.data.data);
       setGetSearch('');
       router.push(`/?nameTitle=${getSearch}`);

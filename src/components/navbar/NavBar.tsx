@@ -4,7 +4,7 @@ import { Redressed } from "next/font/google";
 import CartCount from "./CartCount";
 import Auth from "./Auth";
 import { useCart } from "@/app/hook/useCart";
-import React, { useState } from 'react';
+import React from 'react';
 import axios from "axios";
 import { useRouter } from 'next/navigation';
 
@@ -18,13 +18,11 @@ const {dataSearch,setDataSearch} =useCart()
 const router = useRouter();
 
 
-
-
   console.log('Data Search:', dataSearch);
   
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`https://be-e-commerce-3ayq.onrender.com/api/products/getAllProducts/?nameTitle=${getSearch}`);
+      const response = await axios.get(`https://be-e-commerce-53v7.onrender.com/api/products/getAllProducts/?nameTitle=${getSearch}`);
       setDataSearch(response.data.data);
       setGetSearch('');
       router.push(`/?nameTitle=${getSearch}`);

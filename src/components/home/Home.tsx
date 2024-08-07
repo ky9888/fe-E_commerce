@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/app/hook/useCart";
-import React, { useEffect } from "react";
+import React from "react";
 
 
 type Product = {

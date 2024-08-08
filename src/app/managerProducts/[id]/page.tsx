@@ -1,31 +1,34 @@
-import UpdateProduct from "./updateProducts"
+import UpdateProduct from "./updateProducts";
 
-export type productType={
-  _id:string,
-  name:string,
-  selectImg:seletImgtype,
+export type productType = {
+  _id: string,
+  name: string,
+  selectImg: seletImgtype,
+};
 
-}
-export type seletImgtype={
-  title:string,
-  image:string,
- 
+export type seletImgtype = {
+  title: string,
+  image: string,
+};
 
-}
-
-export default async  function home({
-    params:{id}
-}:{
-    params:{id:string}
+export default async function home({
+  params: { id },
+}: {
+  params: { id: string },
 }) {
-    const res =await fetch (`${process.env.URL}/products/getDetailProducts/${id}`,{cache: "no-store"})
-    const ress=await res.json();
-    const data=ress.data
-    console.log("check data",data);
+  let data: productType | null = null;
+  try {
+    const res = await fetch(`${process.env.URL}/products/getDetailProducts/${id}`, { cache: "no-store" });
+    const ress = await res.json();
+    data = ress.data;
+  } catch (error) {
+    console.error("Error fetching product details:", error);
+  }
+  console.log("check data", data);
+
   return (
     <>
-     <UpdateProduct data={data}/>
-      
+      <UpdateProduct data={data} />
     </>
   );
 }

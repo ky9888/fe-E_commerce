@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/products/**/*": {
+    "app/**/*": {
       "maxDuration": 30
     }
   }

@@ -1,7 +1,7 @@
 {
-    "functions": {
-      "api/products/getAllProducts/**/*": {
-            "maxDuration": 30
-        }
+  "functions": {
+    "api/products/**/*.js": {
+      "maxDuration": 30
     }
   }
+}

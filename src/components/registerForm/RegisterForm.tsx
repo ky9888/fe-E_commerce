@@ -68,19 +68,13 @@ const RegisterForm: React.FC = () => {
   });
 
   return (
-    <div className=" w-screen flex justify-center mt-[10%] px-[30%] max-lg:px-[7%] ">
+    <div className=" w-screen flex justify-center my-[5%] px-[30%] max-lg:px-[7%] ">
       <form
         className="rounded-lg space-y-2 w-full h-full shadow-[0_0px_70px_-5px_rgba(0,0,0,0.1)] p-5"
         onSubmit={formik.handleSubmit}
       >
         <h1 className="text-center font-bold text-[23px]">Đăng ký</h1>
-        <div
-          className=" hover:bg-slate-300 flex items-center space-x-2 justify-center text-[14px] font-bold p-2 border-2 border-slate-700 rounded-lg 
-        "
-        >
-          <p><GrGoogle /></p>
-          <p>Đăng ký với google</p>
-        </div>
+       
         <div className="border border-slate-400 rounded-md p-2 ">
           <label htmlFor="name" className="text-slate-700 px-1 ">
             Tên đăng ký

@@ -133,7 +133,7 @@ const ProductDetail: React.FC<HomePageProps> = ({ data }) => {
             <>
               <div className="flex items-center space-x-5 mt-10 ">
                 <div className=" border max-sm:px-2 border-yellow-500 flex justify-center w-[250px] py-4 rounded-xl bg-gradient-to-b from-yellow-100 to-white">
-                  <div className="">
+                  <div className="">  
                     <p className="font-medium">Mua ngay với giá</p>
                     <p className="text-[28px] font-bold max-sm:text-[15px]  ">{data.priceG}đ</p>
                     <p className="line-through max-sm:text-[12px]">{data.price}đ</p>

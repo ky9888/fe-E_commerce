@@ -64,7 +64,7 @@ const ProductDetail: React.FC<HomePageProps> = ({ data }) => {
       return { ...prev, selectImg: value };
     });
   }, []);
-  console.log("alla", cartProducts);
+ console.log("alla", cartProduct.quantity);
   const handleQtyIncrease = useCallback(() => {
     if (cartProduct.quantity === 99) {
       return cartProduct.quantity;

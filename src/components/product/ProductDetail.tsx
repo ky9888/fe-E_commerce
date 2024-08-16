@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useState, memo, useEffect } from "react";
+import { useCallback, useState,  useEffect } from "react";
 import SetColor from "./SetColor";
 import ProductImg from "./ProductImg";
 import SetQuantity from "./SetQuantity";
@@ -166,4 +166,4 @@ const ProductDetail: React.FC<HomePageProps> = ({ data }) => {
   );
 };
 
-export default memo(ProductDetail);
+export default ProductDetail;

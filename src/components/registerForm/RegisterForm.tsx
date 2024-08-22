@@ -51,7 +51,7 @@ const RegisterForm: React.FC = () => {
        console.log(values);
          axios({
            method: 'POST',
-           url: `${process.env.URL}/auth/singUp`,
+           url: `${process.env.URL}/auth/singup`,
            data: values
          })
            .then(function (res) {

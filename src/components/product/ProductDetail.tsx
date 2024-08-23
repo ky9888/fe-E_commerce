@@ -64,11 +64,11 @@ const ProductDetail: React.FC<HomePageProps> = ({ data }) => {
       return { ...prev, selectImg: value };
     });
   }, []);
-<<<<<<< HEAD
+
   console.log("alla", cartProduct.quantity);
-=======
- console.log("alla", cartProduct.quantity);
->>>>>>> 381cfa17eada7a6ad245c2b23ca353a09473958b
+
+
+
   const handleQtyIncrease = useCallback(() => {
     if (cartProduct.quantity === 99) {
       return cartProduct.quantity;

@@ -1,7 +1,14 @@
 {
+<<<<<<< HEAD
     "functions": {
       "app/**/*.tsx": {
             "maxDuration": 20
         }
+=======
+  "functions": {
+    "app/**/*": {
+      "maxDuration": 100
+>>>>>>> 381cfa17eada7a6ad245c2b23ca353a09473958b
     }
   }
+}

@@ -84,14 +84,14 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <div className=" w-full flex justify-center  mt-[10%] px-[30%] max-lg:px-[7%] ">
+    <div className=" w-full flex justify-center  my-[5%] px-[30%] max-lg:px-[7%] ">
       <form
         className="rounded-lg space-y-2 w-full h-full shadow-[0_0px_70px_-5px_rgba(0,0,0,0.1)] p-5"
         onSubmit={formik.handleSubmit}
       >
         <h1 className="text-center font-bold text-[23px]">Đăng nhập</h1>
         <a
-          href="https://be-e-commerce-zqw9.onrender.com/api/auth/google"
+          href="https://be-e-commerce-1.onrender.com/api/auth/google"
           className=" hover:bg-slate-300 flex items-center space-x-2 justify-center text-[14px] font-bold p-2 border-2 border-slate-700 rounded-lg 
         "
         >

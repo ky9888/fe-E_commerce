@@ -1,13 +1,13 @@
 'use client'
 import { productType } from "./ProductDetail";
 import { memo } from "react";
-type SetQuantity ={
+type SetQuantityy ={
     cartProduct:productType;
     handleQtyIncrease:()=>void;
     handleQtyDecrease:()=>void
 }
 
-const SetQuantity:React.FC<SetQuantity> = ({cartProduct,handleQtyIncrease,handleQtyDecrease}) => {{
+const SetQuantity:React.FC<SetQuantityy> = ({cartProduct,handleQtyIncrease,handleQtyDecrease}) => {{
 
 }
     return ( 
@@ -21,6 +21,7 @@ const SetQuantity:React.FC<SetQuantity> = ({cartProduct,handleQtyIncrease,handle
         </div>
 
      );
+     handleQtyIncrease
 }
  
 export default memo(SetQuantity);

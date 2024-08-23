@@ -20,7 +20,7 @@ export default function Home({
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.post(`https://be-e-commerce-zqw9.onrender.com/api/auth/login-success/${id}`);
+                const response = await axios.post(`https://be-e-commerce-1.onrender.com/api/auth/login-success/${id}`);
                 router.push("/")
                 const user = response.data.user;               
                 setGetUserId(user); // Set the whole user object

@@ -32,6 +32,12 @@ export default function Home({
 
         fetchData();
     }, []); // Adding `id` to dependencies
-
+   return (
+    <div className=" ">
+      <h1 className="text-center text-[35px] mt-[100px] text-red-500">
+        loading...!
+      </h1>
+    </div>
+  );
   
 }

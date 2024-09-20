@@ -34,7 +34,7 @@ export default function Home({
     }, []); // Adding `id` to dependencies
    return (
     <div className=" ">
-      <p className="text-center  text-[35px] mt-[100px] text-red-500">
+      <p className="text-center mx-[45%]  text-[35px] mt-[100px] text-red-500">
         loading...!
       </p>
     </div>

@@ -33,10 +33,10 @@ export default function Home({
         fetchData();
     }, []); // Adding `id` to dependencies
    return (
-    <div className=" flex justify-center">
-      <h1 className="text-center text-[35px] mt-[100px] text-red-500">
+    <div className=" ">
+      <p className="text-center  text-[35px] mt-[100px] text-red-500">
         loading...!
-      </h1>
+      </p>
     </div>
   );
   

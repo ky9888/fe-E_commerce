@@ -51,7 +51,7 @@ const LoginForm: React.FC = () => {
       console.log(values);
       axios({
         method: "POST",
-        url: `${process.env.URL}/auth/singin`,
+        url: 'https://be-e-commerce-tohe.onrender.com/api/auth/singin',
         data: values,
       })
         .then(function (res) {

@@ -51,7 +51,7 @@ const RegisterForm: React.FC = () => {
        console.log(values);
          axios({
            method: 'POST',
-           url: `${process.env.URL}/auth/singup`,
+           url: 'https://be-e-commerce-tohe.onrender.com/api/auth/singup',
            data: values
          })
            .then(function (res) {

@@ -33,7 +33,7 @@ const router = useRouter();
   
 
   return (
-    <div className="flex justify-between bg-slate-300 items-center px-[5%] py-4 max-md:block max-md:px-2 max-md:py-4 max-md:space-y-2">
+    <div className="flex justify-between bg-slate-300 items-center fixed w-full px-[5%] py-4 max-md:block max-md:px-2 max-md:py-4 max-md:space-y-2">
      <p onClick={()=>router.push('/')} className={`${redressed.className} cursor-pointer  text-[20px] font-bold max-md:text-center`}>
         Thế Giới REP-Chuẩn REAL
       </p>

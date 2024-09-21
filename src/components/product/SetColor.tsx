@@ -16,7 +16,7 @@ const SetColor: React.FC<setColorProps> = ({
   console.log(images);
 
   return (
-    <div className="flex items-center justify-between ">
+    <div className="flex items-center justify-between max-sm:hidden ">
       <p>Màu sắc</p>
       <div className="flex space-x-2 ">
         {images.map((image) => {

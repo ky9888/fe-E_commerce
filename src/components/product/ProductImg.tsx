@@ -39,18 +39,20 @@ const ProductImg: React.FC<productImage> = ({
               } cursor-pointer`}
               key={image._id}
             >
-              <div className=" p-2  ">
-                <div className="flex justify-center">
-                  <Image
-                    src={image.image}
-                    alt={cartProduct.name}
-                    width={40}
-                    height={40}
-                    quality={100}
-                    className="bg-cover bg-center   "
-                  />
+              <div className=" p-2  space-x-1 flex items-center h-full ">
+                <div >
+                  <div className="flex justify-center ">
+                    <Image
+                      src={image.image}
+                      alt={cartProduct.name}
+                      width={40}
+                      height={40}
+                      quality={100}
+                      className="bg-cover bg-center   "
+                    />
+                  </div>
+                  <p className="text-center ">{image.color}</p>
                 </div>
-                <p>{image.color}</p>
               </div>
             </div>
           );

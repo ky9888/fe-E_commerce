@@ -7,7 +7,7 @@ export default async function home() {
   
 
   try {
-    const res = await fetch(`${process.env.URL}/products/getAllProducts`, {
+   const res = await fetch('https://be-e-commerce-tohe.onrender.com/api/products/getAllProducts', {
       cache: "no-store",
     
     });

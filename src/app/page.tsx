@@ -4,15 +4,14 @@ import HomePage from "@/components/home/Home";
 export default async function home() {
   let data = [];
 
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 20000); 
-
   try {
-    const res = await fetch('https://be-e-commerce-tohe.onrender.com/api/products/getAllProducts', {
-      cache: "no-store",
-      signal: controller.signal,
-    });
-    clearTimeout(timeoutId); 
+    const res = await fetch(
+      "https://be-e-commerce-tohe.onrender.com/api/products/getAllProducts",
+      {
+        cache: "no-store",
+      }
+    );
+
     const ress = await res.json();
     data = ress.data;
   } catch (error) {
@@ -30,4 +29,3 @@ export default async function home() {
     </div>
   );
 }
-

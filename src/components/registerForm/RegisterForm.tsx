@@ -62,7 +62,7 @@ const RegisterForm: React.FC = () => {
            })
            .catch(function (res) {
               console.log(res)
-              alert("Email đã tồn tại")
+              alert("Email hoặc tên đăng ký đã tồn tại đã tồn tại")
          });
      },
   });
